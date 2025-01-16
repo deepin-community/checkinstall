@@ -1,9 +1,23 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Upstream-Name: Checkinstall
+Upstream-Contact: Felipe Eduardo Sánchez Díaz Durán <izto@asic-linux.com.mx>
+Source: http://www.asic-linux.com.mx/~izto/checkinstall/index.php
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
+Copyright: 2002-2010 Felipe Eduardo Sánchez Díaz Durán <izto@asic-linux.com.mx>
+License: GPL-2+
+
+Files: installwatch/*
+Copyright: 1998, Pancrazio de Mauro <p@demauro.net>
+           1998-2006, Felipe Eduardo Sánchez Díaz Durán <izto@asic-linux.com.mx>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2006-2010, Felipe Sateler <fsateler@gmail.com>
+           2011-2012, Andreas Noteng <andreas@noteng.no>
+           2019-2023, Stephen Gelman <ssgelm@debian.org>
+License: GPL-2+
+
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -16,7 +30,8 @@ License: GPL-2+
  GNU General Public License for more details.
  .
  You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ along with this package; if not, write to the Free Software
+ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
  .
  On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ Public License can be found in `/usr/share/common-licenses/GPL-2'.

@@ -1,0 +1,20 @@
+Description: Fix HPPA build. From bug report at https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1055075
+Author: John David Anglin <dave@parisc-linux.org>
+Last-Update: 2023-10-30
+---
+--- ./installwatch/Makefile.save	2023-10-30 20:38:12.966959364 +0000
++++ ./installwatch/Makefile	2023-10-30 20:52:24.243251043 +0000
+@@ -13,10 +13,12 @@
+ BINDIR=$(PREFIX)/bin
+ LIBDIR=$(PREFIX)/lib
+ 
++LIBGCC=`gcc -print-libgcc-file-name`
++
+ all: installwatch.so
+ 
+ installwatch.so: installwatch.o
+-	ld -znow -shared -o installwatch.so installwatch.o -ldl -lc
++	ld -znow -shared -o installwatch.so installwatch.o -ldl -lc $(LIBGCC)
+ 
+ installwatch.o: installwatch.c localdecls.h
+ 	gcc $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) -Wall -c -g -D_GNU_SOURCE -DPIC -fPIC -D_REENTRANT -DVERSION=\"$(VERSION)\" installwatch.c
